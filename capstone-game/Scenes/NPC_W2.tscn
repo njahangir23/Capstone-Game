@@ -1,3 +1,15 @@
-[gd_scene format=3 uid="uid://1ckwpe0lsbr0"]
+[gd_scene load_steps=2 format=3 uid="uid://1ckwpe0lsbr0"]
 
-[node name="NpcW2" type="Node2D"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_jl2rq"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="NpcW2" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jl2rq")
+animation = &"new_animation"
