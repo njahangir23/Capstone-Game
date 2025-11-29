@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc8ecqkaln0or"]
+
+[ext_resource type="Texture2D" uid="uid://cg5o028farlh" path="res://Assets/finalplayerfrontwalkspritesheet.png" id="1_pchja"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uqnyh"]
+atlas = ExtResource("1_pchja")
+region = Rect2(0, 0, 132, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vmhae"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uqnyh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pchja"]
+radius = 8.0
+height = 48.0
+
+[node name="OfficeMan" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_vmhae")
+frame_progress = 0.3614215
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -2)
+shape = SubResource("CapsuleShape2D_pchja")

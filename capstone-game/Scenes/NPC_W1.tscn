@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://cm5rtwr6uftrw"]
+
+[ext_resource type="Texture2D" uid="uid://boqatdc7s2aqm" path="res://Assets/Generic Female NPCs.png" id="1_0uf2r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ch4p4"]
+atlas = ExtResource("1_0uf2r")
+region = Rect2(240, 120, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cvaav"]
+atlas = ExtResource("1_0uf2r")
+region = Rect2(320, 120, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt22q"]
+atlas = ExtResource("1_0uf2r")
+region = Rect2(400, 120, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_djggo"]
+atlas = ExtResource("1_0uf2r")
+region = Rect2(240, 240, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8gb4f"]
+atlas = ExtResource("1_0uf2r")
+region = Rect2(320, 240, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ejy8"]
+atlas = ExtResource("1_0uf2r")
+region = Rect2(400, 240, 80, 120)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p4rfm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ch4p4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cvaav")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt22q")
+}],
+"loop": true,
+"name": &"left",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_djggo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8gb4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ejy8")
+}],
+"loop": true,
+"name": &"right",
+"speed": 2.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eig5w"]
+height = 84.0
+
+[node name="NpcW1" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_p4rfm")
+animation = &"right"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_eig5w")

@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://b7h8leqmnplxp"]
+
+[ext_resource type="Texture2D" uid="uid://bhq1qeqjdyo0y" path="res://Assets/Foozle_2DC0024_Little_Bird_Pixel_Art/Foozle_2DC0024_Little_Bird_Pixel_Art/Spritesheet/Little Bird Fly Forward.png" id="1_rpcp7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_806kn"]
+atlas = ExtResource("1_rpcp7")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2sqn"]
+atlas = ExtResource("1_rpcp7")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6djdu"]
+atlas = ExtResource("1_rpcp7")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_okd8w"]
+atlas = ExtResource("1_rpcp7")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tto85"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_806kn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2sqn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6djdu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_okd8w")
+}],
+"loop": true,
+"name": &"flying",
+"speed": 5.0
+}]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_rpcp7"]
+a = Vector2(-6, -2)
+b = Vector2(-3, 0)
+
+[node name="Bird" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_tto85")
+animation = &"flying"
+frame_progress = 0.36437747
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_rpcp7")
