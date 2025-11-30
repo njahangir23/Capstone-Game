@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://5uocpj2wxss3"]
+
+[ext_resource type="Script" uid="uid://cb13lrf0oi4x4" path="res://Scripts/cabbage.gd" id="1_5ct40"]
+[ext_resource type="Texture2D" uid="uid://ucy40f2q6slw" path="res://Assets/Vegetables_/Vegetables_/One/Chinese Cabbage .png" id="1_l5p30"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c1v7q"]
+
+[node name="Cabbage" type="Area2D"]
+script = ExtResource("1_5ct40")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_l5p30")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_c1v7q")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
