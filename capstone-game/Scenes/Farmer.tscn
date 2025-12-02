@@ -113,26 +113,11 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bwf0l"]
-radius = 4.0
-height = 12.0
+radius = 5.0
+height = 18.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_umi86"]
 radius = 7.0
-
-[sub_resource type="Animation" id="Animation_umi86"]
-resource_name = "fade_out"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("FadeRect:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5, 1),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(0.019607844, 0.52156866, 0.019607844, 0), Color(0.019607844, 0.52156866, 0.019607844, 0.5254902), Color(0.019607844, 0.52156866, 0.019607844, 0.98039216)]
-}
 
 [sub_resource type="Animation" id="Animation_mh42h"]
 length = 0.001
@@ -149,6 +134,21 @@ tracks/0/keys = {
 "values": [Color(0.019607844, 0.52156866, 0.019607844, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_umi86"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FadeRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0.019607844, 0.52156866, 0.019607844, 0), Color(0.019607844, 0.52156866, 0.019607844, 0.5254902), Color(0.019607844, 0.52156866, 0.019607844, 0.98039216)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nfat1"]
 _data = {
 &"RESET": SubResource("Animation_mh42h"),
@@ -159,16 +159,20 @@ _data = {
 script = ExtResource("1_umi86")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -3)
+scale = Vector2(1.4375, 1.3593751)
 sprite_frames = SubResource("SpriteFrames_qpvq1")
 animation = &"idle"
 frame_progress = 0.6681765
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
 shape = SubResource("CapsuleShape2D_bwf0l")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2)
 shape = SubResource("CircleShape2D_umi86")
 
 [node name="TransitionLayer" type="CanvasLayer" parent="."]
@@ -177,6 +181,8 @@ shape = SubResource("CircleShape2D_umi86")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.019607844, 0.52156866, 0.019607844, 0)

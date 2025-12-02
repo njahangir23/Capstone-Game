@@ -9,26 +9,29 @@
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1100, 0)
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(1024, 0)
 
 [node name="CityBackgroundSky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1251.25, -199.00002)
+position = Vector2(1254, 415)
 scale = Vector2(2.4409177, 4.5144506)
 texture = ExtResource("1_4aqey")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_mirroring = Vector2(1100, 0)
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(1024, 0)
 
 [node name="City Layer" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2(943.5, 212)
-scale = Vector2(1.8427734, 2.1560693)
+position = Vector2(1337, 477)
+scale = Vector2(2.621582, 2.9537573)
 texture = ExtResource("2_xgxeb")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(11, 44)
 motion_scale = Vector2(2, 2)
-motion_mirroring = Vector2(1100, 0)
+motion_mirroring = Vector2(1024, 0)
 
 [node name="City Sky Line" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2(859.24994, 224.00005)
-scale = Vector2(1.6713867, 2.0751445)
+position = Vector2(1326, 417)
+scale = Vector2(2.4158933, 3.5534685)
 texture = ExtResource("3_ltlj5")
