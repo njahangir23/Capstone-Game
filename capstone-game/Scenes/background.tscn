@@ -13,8 +13,8 @@ motion_scale = Vector2(2, 2)
 motion_mirroring = Vector2(1024, 0)
 
 [node name="CityBackgroundSky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1254, 415)
-scale = Vector2(2.4409177, 4.5144506)
+position = Vector2(1307.125, 464.49997)
+scale = Vector2(2.5446775, 4.2283235)
 texture = ExtResource("1_4aqey")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
