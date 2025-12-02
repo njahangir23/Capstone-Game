@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://ch23u8c6j38sp"]
+[gd_scene load_steps=18 format=4 uid="uid://ch23u8c6j38sp"]
 
 [ext_resource type="PackedScene" uid="uid://cyt55a1vqlrgr" path="res://Scenes/background.tscn" id="1_t33is"]
 [ext_resource type="Texture2D" uid="uid://qoadcdv5qqf7" path="res://Assets/tileset_city_free.png" id="2_6bry8"]
@@ -7,6 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://b6yy2b5wwuymf" path="res://Assets/City Tileset's/City Tileset's/Project Mute Tileset V2.png" id="5_7h23t"]
 [ext_resource type="PackedScene" uid="uid://daquyxhtbfi0j" path="res://Scenes/Farmer.tscn" id="6_x2kcs"]
 [ext_resource type="PackedScene" uid="uid://5uocpj2wxss3" path="res://Scenes/Cabbage.tscn" id="7_1l8qe"]
+[ext_resource type="FontFile" uid="uid://cjn4prvirh6hf" path="res://Font/dungeon-mode.ttf" id="7_s7evf"]
+[ext_resource type="Texture2D" uid="uid://cjiv5mysqdpui" path="res://Assets/Vegetables_/Vegetables_/One/Green Cabbage.png" id="8_ibde2"]
+[ext_resource type="Script" uid="uid://3wa3d1tl1545" path="res://Scripts/game_manager.gd" id="10_0k7nw"]
+[ext_resource type="PackedScene" uid="uid://crlval2s5rgc1" path="res://Scenes/Purple_Cabbage.tscn" id="11_ibde2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_06phl"]
 texture = ExtResource("2_6bry8")
@@ -1263,6 +1267,12 @@ sources/1 = SubResource("TileSetAtlasSource_s7evf")
 sources/2 = SubResource("TileSetAtlasSource_ibde2")
 sources/3 = SubResource("TileSetAtlasSource_0k7nw")
 
+[sub_resource type="LabelSettings" id="LabelSettings_np8lt"]
+font = ExtResource("7_s7evf")
+font_size = 18
+outline_size = 3
+outline_color = Color(0.004899827, 0.004899827, 0.004899827, 1)
+
 [node name="Main Scene" type="Node2D"]
 scale = Vector2(1.5, 1.5)
 
@@ -1279,5 +1289,25 @@ position = Vector2(6.666667, 376.66666)
 [node name="Camera2D" type="Camera2D" parent="Farmer"]
 zoom = Vector2(2.5, 2.5)
 
+[node name="Label" type="Label" parent="Farmer/Camera2D"]
+unique_name_in_owner = true
+offset_left = -130.0
+offset_top = 67.333336
+offset_right = -90.0
+offset_bottom = 85.333336
+text = "=0"
+label_settings = SubResource("LabelSettings_np8lt")
+
+[node name="Sprite2D" type="Sprite2D" parent="Farmer/Camera2D"]
+position = Vector2(-141.66667, 75)
+scale = Vector2(0.64583313, 0.6458333)
+texture = ExtResource("8_ibde2")
+
 [node name="Cabbage" parent="." instance=ExtResource("7_1l8qe")]
 position = Vector2(223.33333, 288.6667)
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("10_0k7nw")
+
+[node name="PurpleCabbage" parent="." instance=ExtResource("11_ibde2")]
+position = Vector2(72, 334.6667)

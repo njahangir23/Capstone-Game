@@ -6,6 +6,9 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var jumping = false
 var has_pickup = false  # ✅ tracks whether the player collected the pickup
+var cabbage_counter =0
+
+@onready var cabbage_label = %Label
 
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
@@ -37,3 +40,25 @@ func _physics_process(delta: float) -> void:
 			animated_sprite_2d.play("idle")
 
 	move_and_slide()
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	print("entered")
+	if area.is_in_group("cabbage"):
+		set_cabbage(cabbage_counter+1)
+	if area.is_in_group("purple_cabbage"):
+		set_cabbage(cabbage_counter+2)
+	
+func set_cabbage (new_cabbage_count: int) -> void:
+	cabbage_counter = new_cabbage_count
+	cabbage_label.text = "=" + str(cabbage_counter)
+	if cabbage_counter >= 15:
+		_go_to_next_scene()
+
+func _go_to_next_scene():
+	$TransitionLayer/AnimationPlayer.play("fade_out")
+	
+	await $TransitionLayer/AnimationPlayer.animation_finished
+	
+	await get_tree().create_timer(0.25).timeout
+	
+	get_tree().call_deferred("change_scene_to_file", "res://Scenes/Finished.tscn")

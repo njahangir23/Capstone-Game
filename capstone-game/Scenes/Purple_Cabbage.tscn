@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://crlval2s5rgc1"]
+
+[ext_resource type="Script" uid="uid://b4qkcmaaeq68f" path="res://Scripts/purple_cabbage.gd" id="1_3eupn"]
+[ext_resource type="Texture2D" uid="uid://de16n4j70houy" path="res://Assets/Vegetables_/Vegetables_/One/Purple Cabbage.png" id="1_5eqfv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3eupn"]
+radius = 12.165525
+
+[node name="PurpleCabbage" type="Area2D" groups=["purple_cabbage"]]
+script = ExtResource("1_3eupn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(5, 4)
+scale = Vector2(1.3125, 1.25)
+texture = ExtResource("1_5eqfv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 5)
+shape = SubResource("CircleShape2D_3eupn")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
