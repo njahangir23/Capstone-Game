@@ -1,8 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://cyt55a1vqlrgr"]
+[gd_scene load_steps=11 format=3 uid="uid://cyt55a1vqlrgr"]
 
 [ext_resource type="Texture2D" uid="uid://cny1qnkvgxkp1" path="res://Assets/GandalfHardcore City Tiles/GandalfHardcore City Tiles/City background sky.png" id="1_4aqey"]
 [ext_resource type="Texture2D" uid="uid://bb42moep7jr6f" path="res://Assets/GandalfHardcore City Tiles/GandalfHardcore City Tiles/City background layer1.png" id="2_xgxeb"]
 [ext_resource type="Texture2D" uid="uid://fyb20thsgsck" path="res://Assets/GandalfHardcore City Tiles/GandalfHardcore City Tiles/City background layer2.png" id="3_ltlj5"]
+[ext_resource type="Texture2D" uid="uid://bjgghksof3j06" path="res://Assets/City_Clean/2.Buildings.png" id="4_b4xn0"]
+[ext_resource type="Texture2D" uid="uid://b0nijk2t4mfbj" path="res://Assets/v1/layers/bulkhead-walls-back.png" id="4_xgxeb"]
+[ext_resource type="Texture2D" uid="uid://bnrxxbslqd3w6" path="res://Assets/v1/layers/bulkhead-walls-pipes.png" id="5_rymcx"]
+[ext_resource type="Texture2D" uid="uid://bwu48bro0435y" path="res://Assets/v1/bulkhead-wallsx1.png" id="6_42s4r"]
+[ext_resource type="Texture2D" uid="uid://blx06oy1vtyf5" path="res://Assets/v1/layers/cols.png" id="6_kopta"]
+[ext_resource type="Texture2D" uid="uid://txvqkg7jqyg2" path="res://Assets/v2/PNG/foreground.png" id="8_wi0l6"]
+[ext_resource type="Texture2D" uid="uid://dy84ssj6fwo47" path="res://Assets/bg.png" id="10_b4xn0"]
 
 [node name="Background" type="Parallax2D"]
 
@@ -13,8 +20,8 @@ motion_scale = Vector2(2, 2)
 motion_mirroring = Vector2(1024, 0)
 
 [node name="CityBackgroundSky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2(1307.125, 464.49997)
-scale = Vector2(2.5446775, 4.2283235)
+position = Vector2(1847.625, -98.50003)
+scale = Vector2(3.6003416, 7.482659)
 texture = ExtResource("1_4aqey")
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -22,8 +29,8 @@ motion_scale = Vector2(2, 2)
 motion_mirroring = Vector2(1024, 0)
 
 [node name="City Layer" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
-position = Vector2(1337, 477)
-scale = Vector2(2.621582, 2.9537573)
+position = Vector2(669.6875, 730.25)
+scale = Vector2(1.3111571, 2.134393)
 texture = ExtResource("2_xgxeb")
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -32,6 +39,77 @@ motion_scale = Vector2(2, 2)
 motion_mirroring = Vector2(1024, 0)
 
 [node name="City Sky Line" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
-position = Vector2(1326, 417)
-scale = Vector2(2.4158933, 3.5534685)
+position = Vector2(660.00006, 597)
+scale = Vector2(1.3029631, 2.6233742)
 texture = ExtResource("3_ltlj5")
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(11, 44)
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(1024, 0)
+
+[node name="City Sky Line" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer10"]
+position = Vector2(981, 960.00006)
+scale = Vector2(2.3874192, 2.9003673)
+texture = ExtResource("4_b4xn0")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(11, 44)
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="City Sky Line" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2(572, 3455)
+scale = Vector2(3.2076669, 3.8392715)
+texture = ExtResource("4_xgxeb")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(11, 44)
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="City Sky Line" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer7"]
+position = Vector2(761, 3488)
+scale = Vector2(3.7960148, 4.062448)
+texture = ExtResource("5_rymcx")
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(11, 44)
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="City Sky Line" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer9"]
+position = Vector2(615, 3588)
+scale = Vector2(3.4292576, 4.7276664)
+texture = ExtResource("6_kopta")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(11, 44)
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="City Sky Line" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2(1700, 3451)
+scale = Vector2(3.221871, 3.8482137)
+texture = ExtResource("6_42s4r")
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(11, 44)
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(2048, 0)
+
+[node name="City Sky Line" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer8"]
+position = Vector2(1782, 3362.0002)
+scale = Vector2(3.7960148, 4.062448)
+texture = ExtResource("8_wi0l6")
+
+[node name="ParallaxLayer12" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(11, 44)
+motion_scale = Vector2(2, 2)
+motion_mirroring = Vector2(2710, 0)
+
+[node name="City Sky Line" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer12"]
+position = Vector2(1340.9999, 2091)
+rotation = 3.1415927
+scale = Vector2(9.961606, 11.702947)
+texture = ExtResource("10_b4xn0")
