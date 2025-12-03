@@ -45,6 +45,7 @@ b = Vector2(-3, 0)
 [node name="Bird" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -2)
 sprite_frames = SubResource("SpriteFrames_tto85")
 animation = &"flying"
 frame_progress = 0.36437747

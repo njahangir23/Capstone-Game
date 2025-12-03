@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=3 uid="uid://r0nlvnqajhmf"]
+
+[ext_resource type="Texture2D" uid="uid://ho0cgbagkle3" path="res://Assets/Mouse/MouseIdle/MouseIdle.png" id="1_6wno3"]
+[ext_resource type="Script" uid="uid://cg3jw42o8vvme" path="res://Scenes/mouse.gd" id="1_kalpc"]
+[ext_resource type="Texture2D" uid="uid://ottr0jw23d1m" path="res://Assets/Mouse/MouseWalking/MouseWalking.png" id="2_kalpc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4p24"]
+atlas = ExtResource("1_6wno3")
+region = Rect2(0, 0, 68, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_81ofm"]
+atlas = ExtResource("1_6wno3")
+region = Rect2(68, 0, 68, 40)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu6sq"]
+atlas = ExtResource("2_kalpc")
+region = Rect2(0, 0, 69, 38)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4b8l"]
+atlas = ExtResource("2_kalpc")
+region = Rect2(69, 0, 69, 38)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1ytvo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4p24")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_81ofm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 17.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu6sq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4b8l")
+}],
+"loop": true,
+"name": &"walking",
+"speed": 20.0
+}]
+
+[node name="Mouse" type="Node2D"]
+script = ExtResource("1_kalpc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1ytvo")
+animation = &"walking"
+frame_progress = 0.8327865
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
