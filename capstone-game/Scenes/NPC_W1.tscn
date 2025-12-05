@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://cm5rtwr6uftrw"]
+[gd_scene load_steps=11 format=3 uid="uid://cm5rtwr6uftrw"]
 
 [ext_resource type="Texture2D" uid="uid://boqatdc7s2aqm" path="res://Assets/Generic Female NPCs.png" id="1_0uf2r"]
+[ext_resource type="Script" uid="uid://deh46ga5gj26p" path="res://Scenes/npc_w_1.gd" id="1_ch4p4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ch4p4"]
 atlas = ExtResource("1_0uf2r")
@@ -58,13 +59,21 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eig5w"]
-height = 84.0
+radius = 5.0
+height = 22.0
 
 [node name="NpcW1" type="CharacterBody2D"]
+script = ExtResource("1_ch4p4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-22, -30)
+scale = Vector2(0.45, 0.5)
 sprite_frames = SubResource("SpriteFrames_p4rfm")
 animation = &"right"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-23, -29)
 shape = SubResource("CapsuleShape2D_eig5w")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-23, -27)

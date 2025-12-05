@@ -1,5 +1,6 @@
-[gd_scene load_steps=25 format=4 uid="uid://ch23u8c6j38sp"]
+[gd_scene load_steps=26 format=4 uid="uid://ch23u8c6j38sp"]
 
+[ext_resource type="PackedScene" uid="uid://cm5rtwr6uftrw" path="res://Scenes/NPC_W1.tscn" id="1_2nv37"]
 [ext_resource type="PackedScene" uid="uid://cyt55a1vqlrgr" path="res://Scenes/background.tscn" id="1_t33is"]
 [ext_resource type="Texture2D" uid="uid://qoadcdv5qqf7" path="res://Assets/tileset_city_free.png" id="2_6bry8"]
 [ext_resource type="Texture2D" uid="uid://bxgdw4pxx1mkp" path="res://Assets/GandalfHardcore City Tiles/GandalfHardcore City Tiles/Building Tiles 32x32.png" id="3_x2kcs"]
@@ -4269,7 +4270,7 @@ tile_map_data = PackedByteArray("AAB7ABUAAAAYABEAAAB7ABYAAAAYABIAAAB8ABUAAAAYABE
 tile_set = SubResource("TileSet_x6hpk")
 
 [node name="Farmer" parent="." instance=ExtResource("6_x2kcs")]
-position = Vector2(2448.6667, 369.33334)
+position = Vector2(2626.6667, 308.6667)
 
 [node name="Camera2D" type="Camera2D" parent="Farmer"]
 zoom = Vector2(2.5, 2.5)
@@ -4293,3 +4294,6 @@ position = Vector2(435.3333, 275.33334)
 
 [node name="PurpleCabbage" parent="." instance=ExtResource("11_ibde2")]
 position = Vector2(924, 224.66666)
+
+[node name="NpcW1" parent="." instance=ExtResource("1_2nv37")]
+position = Vector2(704.6664, 391.3336)
