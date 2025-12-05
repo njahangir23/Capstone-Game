@@ -4270,9 +4270,10 @@ tile_map_data = PackedByteArray("AAB7ABUAAAAYABEAAAB7ABYAAAAYABIAAAB8ABUAAAAYABE
 tile_set = SubResource("TileSet_x6hpk")
 
 [node name="Farmer" parent="." instance=ExtResource("6_x2kcs")]
-position = Vector2(2626.6667, 308.6667)
+position = Vector2(29.333252, 372.6667)
 
 [node name="Camera2D" type="Camera2D" parent="Farmer"]
+position = Vector2(-6, -2.0000205)
 zoom = Vector2(2.5, 2.5)
 
 [node name="Label" type="Label" parent="Farmer/Camera2D"]
@@ -4293,7 +4294,7 @@ texture = ExtResource("8_ibde2")
 position = Vector2(435.3333, 275.33334)
 
 [node name="PurpleCabbage" parent="." instance=ExtResource("11_ibde2")]
-position = Vector2(924, 224.66666)
+position = Vector2(1294, 326.66666)
 
 [node name="NpcW1" parent="." instance=ExtResource("1_2nv37")]
 position = Vector2(704.6664, 391.3336)
