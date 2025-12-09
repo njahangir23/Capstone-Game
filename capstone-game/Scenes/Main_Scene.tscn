@@ -1,4 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=53 format=4 uid="uid://ch23u8c6j38sp"]
+=======
+<<<<<<< HEAD
+[gd_scene load_steps=47 format=4 uid="uid://ch23u8c6j38sp"]
+=======
+[gd_scene load_steps=53 format=4 uid="uid://ch23u8c6j38sp"]
+>>>>>>> 5b11c61b2217c3e729d3c528c6419762e18aea7f
+>>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://cm5rtwr6uftrw" path="res://Scenes/NPC_W1.tscn" id="1_2nv37"]
 [ext_resource type="PackedScene" uid="uid://cyt55a1vqlrgr" path="res://Scenes/background.tscn" id="1_t33is"]
@@ -22,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://r0nlvnqajhmf" path="res://Scenes/Mouse.tscn" id="16_vndvl"]
 [ext_resource type="PackedScene" uid="uid://b5ahon5im8fdr" path="res://Scenes/sewer_platform.tscn" id="17_dvjdo"]
 [ext_resource type="Texture2D" uid="uid://bxkwq8odei2eu" path="res://Assets/City_Clean/4.Sidewalk.png" id="18_kuq17"]
+[ext_resource type="PackedScene" uid="uid://c52u6m82il7pc" path="res://speech_bubble.tscn" id="19_g6op0"]
 [ext_resource type="PackedScene" uid="uid://dmdje5a0pm38q" path="res://Scenes/Garbage_platform.tscn" id="22_x65fg"]
 [ext_resource type="PackedScene" uid="uid://b80oydiimfxi1" path="res://Scenes/Climbing_Platform.tscn" id="24_5apre"]
 
@@ -7355,6 +7364,9 @@ texture = ExtResource("8_ibde2")
 
 [node name="NpcW1" parent="." instance=ExtResource("1_2nv37")]
 position = Vector2(704.6664, 391.3336)
+
+[node name="SpeechBubble2" parent="NpcW1" instance=ExtResource("19_g6op0")]
+position = Vector2(0.00032544136, -98.000244)
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
 position = Vector2(0.6666667, 0)

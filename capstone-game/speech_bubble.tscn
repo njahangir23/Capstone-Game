@@ -1,7 +1,14 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=3 format=3 uid="uid://cso3yp6yso7ji"]
 
 [ext_resource type="FontFile" uid="uid://cjn4prvirh6hf" path="res://Font/dungeon-mode.ttf" id="1_gm1uq"]
 [ext_resource type="Script" uid="uid://dpkxh3ws5yw7n" path="res://speech_bubble.gd" id="1_hxg5a"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://c52u6m82il7pc"]
+
+[ext_resource type="FontFile" uid="uid://cjn4prvirh6hf" path="res://Font/dungeon-mode.ttf" id="1_gm1uq"]
+[ext_resource type="Script" uid="uid://beyxs5q7sv1tj" path="res://speech_bubble.gd" id="1_hxg5a"]
+>>>>>>> Stashed changes
 
 [node name="SpeechBubble" type="Node2D"]
 script = ExtResource("1_hxg5a")
