@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://cso3yp6yso7ji"]
+
+[ext_resource type="FontFile" uid="uid://cjn4prvirh6hf" path="res://Font/dungeon-mode.ttf" id="1_gm1uq"]
+[ext_resource type="Script" uid="uid://dpkxh3ws5yw7n" path="res://speech_bubble.gd" id="1_hxg5a"]
+
+[node name="SpeechBubble" type="Node2D"]
+script = ExtResource("1_hxg5a")
+
+[node name="Anchor" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Anchor"]
+offset_left = -12.0
+offset_top = -11.0
+offset_right = 68.0
+offset_bottom = 59.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Anchor"]
+offset_left = -6.0
+offset_top = -9.0
+offset_right = 57.0
+offset_bottom = 52.0
+theme_override_constants/line_separation = 2
+theme_override_constants/paragraph_separation = 2
+theme_override_fonts/normal_font = ExtResource("1_gm1uq")
+theme_override_font_sizes/normal_font_size = 16
+bbcode_enabled = true
+scroll_active = false
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
