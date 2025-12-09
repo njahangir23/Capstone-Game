@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b80oydiimfxi1"]
+
+[ext_resource type="Texture2D" uid="uid://bdmh1aq02rwub" path="res://Assets/City Prop Tileset update 2.png" id="1_14nxs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14nxs"]
+size = Vector2(58, 10)
+
+[node name="ClimbingPlatform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(59.5, 45)
+scale = Vector2(1.3541669, 1)
+texture = ExtResource("1_14nxs")
+region_enabled = true
+region_rect = Rect2(64, 320, 48, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(59, 44)
+shape = SubResource("RectangleShape2D_14nxs")
+one_way_collision = true
