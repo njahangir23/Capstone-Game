@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b68jh2chxije3"
-path="res://.godot/imported/7.png-cdc8d9f7e8c1eba9664ae13fa874d135.ctex"
+uid="uid://bbttfh5jjrx1a"
+path="res://.godot/imported/1.png-ad3a191b001e7705f8fd01c72cc5d665.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/city 3/7.png"
-dest_files=["res://.godot/imported/7.png-cdc8d9f7e8c1eba9664ae13fa874d135.ctex"]
+source_file="res://Assets/1.png"
+dest_files=["res://.godot/imported/1.png-ad3a191b001e7705f8fd01c72cc5d665.ctex"]
 
 [params]
 

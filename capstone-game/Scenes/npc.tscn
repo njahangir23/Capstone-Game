@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b3v0eidryol1v"]
 
-[ext_resource type="Script" uid="uid://ck07mh5n2lc80" path="res://npc.gd" id="1_xxcha"]
+[ext_resource type="Script" uid="uid://ck07mh5n2lc80" path="res://Scripts/npc.gd" id="1_xxcha"]
 [ext_resource type="Texture2D" uid="uid://5gyu30x3puk0" path="res://Assets/Vegetables_/Vegetables_/One/Tomato.png" id="2_kh24r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ul7y6"]

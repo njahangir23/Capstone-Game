@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmdje5a0pm38q"]
+
+[ext_resource type="Texture2D" uid="uid://bdmh1aq02rwub" path="res://Assets/City Prop Tileset update 2.png" id="1_us8o6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bae6n"]
+size = Vector2(262, 70)
+
+[node name="GarbagePlatform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(38.72655, 13.88542)
+scale = Vector2(1.0113937, 1.0143225)
+texture = ExtResource("1_us8o6")
+region_enabled = true
+region_rect = Rect2(384, 368, 48, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(38.215702, 14.57267)
+scale = Vector2(0.17028396, 0.17181288)
+shape = SubResource("RectangleShape2D_bae6n")
+one_way_collision = true

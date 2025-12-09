@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://blx06oy1vtyf5" path="res://Assets/v1/layers/cols.png" id="6_kopta"]
 [ext_resource type="Texture2D" uid="uid://txvqkg7jqyg2" path="res://Assets/v2/PNG/foreground.png" id="8_wi0l6"]
 [ext_resource type="Texture2D" uid="uid://dy84ssj6fwo47" path="res://Assets/bg.png" id="10_b4xn0"]
-[ext_resource type="Texture2D" uid="uid://by8pdrbfo3uj2" path="res://Assets/city 3/5.png" id="11_bdh0s"]
+[ext_resource type="Texture2D" path="res://Assets/city 3/5.png" id="11_bdh0s"]
 
 [node name="Background" type="Parallax2D"]
 
