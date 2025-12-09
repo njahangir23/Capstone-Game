@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://r0nlvnqajhmf"]
+[gd_scene load_steps=10 format=3 uid="uid://r0nlvnqajhmf"]
 
 [ext_resource type="Texture2D" uid="uid://ho0cgbagkle3" path="res://Assets/Mouse/MouseIdle/MouseIdle.png" id="1_6wno3"]
 [ext_resource type="Script" uid="uid://cg3jw42o8vvme" path="res://Scenes/mouse.gd" id="1_kalpc"]
@@ -45,6 +45,9 @@ animations = [{
 "speed": 20.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_kalpc"]
+radius = 15.132746
+
 [node name="Mouse" type="Node2D"]
 script = ExtResource("1_kalpc")
 
@@ -52,6 +55,10 @@ script = ExtResource("1_kalpc")
 sprite_frames = SubResource("SpriteFrames_1ytvo")
 animation = &"walking"
 frame_progress = 0.8327865
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
+position = Vector2(4, 3)
+shape = SubResource("CircleShape2D_kalpc")
 
 [node name="RayCastRight" type="RayCast2D" parent="."]
 

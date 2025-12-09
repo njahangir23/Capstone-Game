@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5ahon5im8fdr"]
+
+[ext_resource type="Texture2D" uid="uid://cxsaslydrt4og" path="res://Assets/tilesetSewer.png" id="1_edj37"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f6nqa"]
+size = Vector2(122, 29)
+
+[node name="Sewer Platform" type="AnimatableBody2D"]
+position = Vector2(0, 7)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(60.249542, 14.000001)
+scale = Vector2(1.3350085, 1.6666667)
+texture = ExtResource("1_edj37")
+region_enabled = true
+region_rect = Rect2(61.333374, 237.33334, 100.66666, 24)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(61, 17.5)
+shape = SubResource("RectangleShape2D_f6nqa")
+one_way_collision = true
