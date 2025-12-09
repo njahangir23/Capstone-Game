@@ -1,8 +1,7 @@
-[gd_scene load_steps=12 format=3 uid="uid://cm5rtwr6uftrw"]
+[gd_scene load_steps=11 format=3 uid="uid://cm5rtwr6uftrw"]
 
 [ext_resource type="Texture2D" uid="uid://boqatdc7s2aqm" path="res://Assets/Generic Female NPCs.png" id="1_0uf2r"]
 [ext_resource type="Script" uid="uid://deh46ga5gj26p" path="res://Scenes/npc_w_1.gd" id="1_ch4p4"]
-[ext_resource type="PackedScene" uid="uid://c52u6m82il7pc" path="res://speech_bubble.tscn" id="3_cvaav"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ch4p4"]
 atlas = ExtResource("1_0uf2r")
@@ -78,9 +77,3 @@ shape = SubResource("CapsuleShape2D_eig5w")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-23, -27)
-
-[node name="SpeechBubble" parent="." instance=ExtResource("3_cvaav")]
-position = Vector2(0, -40)
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
