@@ -127,16 +127,16 @@ offset_left = -425.0
 offset_top = -231.0
 offset_right = 420.0
 offset_bottom = -52.0
-theme_override_colors/font_color = Color(0.91811985, 0.25903612, 0.27252063, 1)
+theme_override_colors/font_color = Color(0.85825026, 0.39777154, 0.70996046, 1)
+theme_override_colors/font_outline_color = Color(0.034860913, 0.0023915705, 0.019322943, 1)
 theme_override_constants/line_spacing = 13
 theme_override_constants/paragraph_spacing = 2
-theme_override_constants/shadow_offset_y = 6
-theme_override_constants/outline_size = 6
-theme_override_constants/shadow_outline_size = 7
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("10_tbdrc")
 theme_override_font_sizes/font_size = 68
-text = "There Goes My 
-Cabbages!"
+text = "THERE GO
+MY CABBAGES"
 horizontal_alignment = 1
 
 [node name="Start Game" type="Button" parent="Camera2D"]
