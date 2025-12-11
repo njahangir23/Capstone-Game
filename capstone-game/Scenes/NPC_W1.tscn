@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://cm5rtwr6uftrw"]
 
 [ext_resource type="Texture2D" uid="uid://boqatdc7s2aqm" path="res://Assets/Generic Female NPCs.png" id="1_0uf2r"]
-[ext_resource type="Script" uid="uid://deh46ga5gj26p" path="res://Scenes/npc_w_1.gd" id="1_ch4p4"]
+[ext_resource type="Script" uid="uid://deh46ga5gj26p" path="res://Scripts/npc_w_1.gd" id="1_ch4p4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ch4p4"]
 atlas = ExtResource("1_0uf2r")

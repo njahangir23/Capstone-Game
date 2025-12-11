@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy13p7i60ju1f"]
+
+[ext_resource type="Texture2D" uid="uid://cjiv5mysqdpui" path="res://Assets/Vegetables_/Vegetables_/One/Green Cabbage.png" id="1_umi6l"]
+[ext_resource type="Texture2D" uid="uid://de16n4j70houy" path="res://Assets/Vegetables_/Vegetables_/One/Purple Cabbage.png" id="2_r4h88"]
+[ext_resource type="Texture2D" uid="uid://ucy40f2q6slw" path="res://Assets/Vegetables_/Vegetables_/One/Chinese Cabbage .png" id="3_6vdpm"]
+
+[node name="Patch" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(66.375, 494.75006)
+scale = Vector2(2.5859375, 2.9921887)
+texture = ExtResource("1_umi6l")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(286.375, 513.75)
+scale = Vector2(3.1093748, 3.171876)
+texture = ExtResource("2_r4h88")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(143.375, 509.75)
+scale = Vector2(2.7421875, 3.0234377)
+texture = ExtResource("2_r4h88")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(209, 490.75)
+scale = Vector2(3.2109373, 3.171876)
+texture = ExtResource("3_6vdpm")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(453.375, 508.75)
+scale = Vector2(3.1093748, 3.171876)
+texture = ExtResource("3_6vdpm")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(370.37497, 492.75)
+scale = Vector2(3.1093748, 3.171876)
+texture = ExtResource("1_umi6l")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(531.375, 499.75)
+scale = Vector2(2.7421875, 3.0234377)
+texture = ExtResource("2_r4h88")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(612.375, 518.75)
+scale = Vector2(3.1093748, 3.171876)
+texture = ExtResource("1_umi6l")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(771, 494.00006)
+scale = Vector2(2.7421875, 3.0234377)
+texture = ExtResource("2_r4h88")
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(695, 510)
+scale = Vector2(3.1093748, 3.171876)
+texture = ExtResource("3_6vdpm")
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(847, 509)
+scale = Vector2(3.1093748, 3.171876)
+texture = ExtResource("1_umi6l")
+
+[node name="Sprite2D12" type="Sprite2D" parent="."]
+position = Vector2(932.99994, 506.00006)
+scale = Vector2(2.7421875, 3.0234377)
+texture = ExtResource("2_r4h88")
+
+[node name="Sprite2D13" type="Sprite2D" parent="."]
+position = Vector2(1014.00006, 515)
+scale = Vector2(3.1093748, 3.171876)
+texture = ExtResource("3_6vdpm")
+
+[node name="Sprite2D14" type="Sprite2D" parent="."]
+position = Vector2(1102.1563, 504.09378)
+scale = Vector2(3.67773, 3.5058603)
+texture = ExtResource("1_umi6l")

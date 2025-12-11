@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://r0nlvnqajhmf"]
 
 [ext_resource type="Texture2D" uid="uid://ho0cgbagkle3" path="res://Assets/Mouse/MouseIdle/MouseIdle.png" id="1_6wno3"]
-[ext_resource type="Script" uid="uid://cg3jw42o8vvme" path="res://Scenes/mouse.gd" id="1_kalpc"]
+[ext_resource type="Script" uid="uid://cg3jw42o8vvme" path="res://Scripts/mouse.gd" id="1_kalpc"]
 [ext_resource type="Texture2D" uid="uid://ottr0jw23d1m" path="res://Assets/Mouse/MouseWalking/MouseWalking.png" id="2_kalpc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i4p24"]

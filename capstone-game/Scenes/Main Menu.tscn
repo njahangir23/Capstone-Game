@@ -1,0 +1,167 @@
+[gd_scene load_steps=17 format=3 uid="uid://01hja3xh8sso"]
+
+[ext_resource type="Texture2D" uid="uid://ytqjn2uie0wp" path="res://Assets/summer 2/1.png" id="1_hcxxy"]
+[ext_resource type="Script" uid="uid://clrsgg81phwrx" path="res://Scripts/main_menu.gd" id="1_wib81"]
+[ext_resource type="Texture2D" uid="uid://cpc6iu3ewqw07" path="res://Assets/summer 2/4.png" id="2_mjet1"]
+[ext_resource type="Texture2D" uid="uid://brd26k14mo3rx" path="res://Assets/summer 1/4.png" id="2_ur25d"]
+[ext_resource type="Texture2D" uid="uid://cawcyekytaljd" path="res://Assets/summer 1/2.png" id="3_4lp62"]
+[ext_resource type="Texture2D" uid="uid://dg67xky0olbig" path="res://Assets/summer 1/3.png" id="3_0126h"]
+[ext_resource type="Texture2D" uid="uid://bb76ajdwj7lmv" path="res://Assets/summer 2/3.png" id="5_4lp62"]
+[ext_resource type="PackedScene" uid="uid://dy13p7i60ju1f" path="res://Scenes/patch.tscn" id="8_wib81"]
+[ext_resource type="Script" uid="uid://cks1f3yd3utkp" path="res://Scripts/camera_2d.gd" id="9_tbdrc"]
+[ext_resource type="FontFile" uid="uid://cjn4prvirh6hf" path="res://Font/dungeon-mode.ttf" id="10_tbdrc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuees"]
+bg_color = Color(0, 0, 0, 0.8117647)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3hb06"]
+bg_color = Color(0.36862746, 0.13725491, 0.3647059, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ns28u"]
+bg_color = Color(0.39215687, 0.12941177, 0.3647059, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wib81"]
+bg_color = Color(0, 0, 0, 0.72156864)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ef6yq"]
+bg_color = Color(0.3882353, 0.78039217, 0.3019608, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbdrc"]
+bg_color = Color(0.25882354, 0.5568628, 0.28627452, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_wib81")
+
+[node name="Background Sky" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 1)
+repeat_size = Vector2(1147, 0)
+autoscroll = Vector2(-0.1, 0)
+repeat_times = 1000
+
+[node name="Background Sky" type="Sprite2D" parent="Background Sky"]
+position = Vector2(576, 322)
+scale = Vector2(2, 2)
+texture = ExtResource("1_hcxxy")
+
+[node name="Background Sky2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(1147, 0)
+autoscroll = Vector2(-0.1, 0)
+repeat_times = 1000
+
+[node name="Background Sky2" type="Sprite2D" parent="Background Sky2"]
+position = Vector2(576, 322)
+scale = Vector2(2, 2)
+texture = ExtResource("2_mjet1")
+
+[node name="Grass" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.7, 1)
+repeat_size = Vector2(1147, 0)
+autoscroll = Vector2(5, 0)
+repeat_times = 1000
+
+[node name="Sprite2D" type="Sprite2D" parent="Grass"]
+position = Vector2(577, 322)
+scale = Vector2(2, 2)
+texture = ExtResource("3_4lp62")
+
+[node name="House" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 1)
+repeat_size = Vector2(2303, 0)
+autoscroll = Vector2(10, 0)
+repeat_times = 500
+
+[node name="Sprite2D" type="Sprite2D" parent="House"]
+position = Vector2(578, 322)
+scale = Vector2(2, 2)
+texture = ExtResource("3_0126h")
+
+[node name="House" type="Sprite2D" parent="House"]
+position = Vector2(579, 325)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ur25d")
+
+[node name="Grass" type="Sprite2D" parent="House"]
+position = Vector2(1730, 331)
+scale = Vector2(1.9965273, 1.9552468)
+
+[node name="Sprite2D2" type="Sprite2D" parent="House"]
+position = Vector2(1732, 323)
+scale = Vector2(2, 2)
+texture = ExtResource("5_4lp62")
+
+[node name="Patch" parent="House" instance=ExtResource("8_wib81")]
+position = Vector2(1133, 6)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(577, 321)
+script = ExtResource("9_tbdrc")
+speed = 100
+
+[node name="Label" type="Label" parent="Camera2D"]
+offset_left = -425.0
+offset_top = -231.0
+offset_right = 420.0
+offset_bottom = -52.0
+theme_override_colors/font_color = Color(0.91811985, 0.25903612, 0.27252063, 1)
+theme_override_constants/line_spacing = 13
+theme_override_constants/paragraph_spacing = 2
+theme_override_constants/shadow_offset_y = 6
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_outline_size = 7
+theme_override_fonts/font = ExtResource("10_tbdrc")
+theme_override_font_sizes/font_size = 68
+text = "There Goes My 
+Cabbages!"
+horizontal_alignment = 1
+
+[node name="Start Game" type="Button" parent="Camera2D"]
+offset_left = -324.0
+offset_top = -40.0
+offset_right = -117.0
+offset_bottom = 49.0
+theme_override_fonts/font = ExtResource("10_tbdrc")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_vuees")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_3hb06")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ns28u")
+text = "Start"
+
+[node name="Tutorial" type="Button" parent="Camera2D"]
+offset_left = 80.0
+offset_top = -40.0
+offset_right = 347.0
+offset_bottom = 51.0
+theme_override_fonts/font = ExtResource("10_tbdrc")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/normal = SubResource("StyleBoxFlat_wib81")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ef6yq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tbdrc")
+text = "Tutorial"
+
+[connection signal="pressed" from="Camera2D/Start Game" to="." method="_on_start_game_pressed"]
+[connection signal="pressed" from="Camera2D/Tutorial" to="." method="_on_tutorial_pressed"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3147buu6ac6x"
-path="res://.godot/imported/4.Sidewalk.png-953d362833f98c7916cf6b5eee12d560.ctex"
+uid="uid://cawcyekytaljd"
+path="res://.godot/imported/2.png-89a9eeae72f76c7bbcb90e0e1251dd2d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/City_Clean/4.Sidewalk.png"
-dest_files=["res://.godot/imported/4.Sidewalk.png-953d362833f98c7916cf6b5eee12d560.ctex"]
+source_file="res://Assets/summer 1/2.png"
+dest_files=["res://.godot/imported/2.png-89a9eeae72f76c7bbcb90e0e1251dd2d.ctex"]
 
 [params]
 
