@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://ch23u8c6j38sp"]
+[gd_scene load_steps=53 format=4 uid="uid://ch23u8c6j38sp"]
 
 [ext_resource type="PackedScene" uid="uid://cm5rtwr6uftrw" path="res://Scenes/NPC_W1.tscn" id="1_2nv37"]
 [ext_resource type="PackedScene" uid="uid://cyt55a1vqlrgr" path="res://Scenes/background.tscn" id="1_t33is"]
@@ -21,10 +21,6 @@
 [ext_resource type="Texture2D" uid="uid://ddisbs0xynxho" path="res://Assets/City Tileset's/City Tileset's/Project Mute Tileset V4.png" id="12_x65fg"]
 [ext_resource type="PackedScene" uid="uid://r0nlvnqajhmf" path="res://Scenes/Mouse.tscn" id="16_vndvl"]
 [ext_resource type="PackedScene" uid="uid://b5ahon5im8fdr" path="res://Scenes/sewer_platform.tscn" id="17_dvjdo"]
-<<<<<<< Updated upstream
-=======
-[ext_resource type="PackedScene" uid="uid://cso3yp6yso7ji" path="res://speech_bubble.tscn" id="17_t8omc"]
->>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://b3147buu6ac6x" path="res://Assets/City_Clean/4.Sidewalk.png" id="18_kuq17"]
 [ext_resource type="PackedScene" uid="uid://dmdje5a0pm38q" path="res://Scenes/Garbage_platform.tscn" id="22_x65fg"]
 [ext_resource type="PackedScene" uid="uid://b80oydiimfxi1" path="res://Scenes/Climbing_Platform.tscn" id="24_5apre"]
@@ -7317,9 +7313,6 @@ _data = {
 &"going up": SubResource("Animation_t8omc")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t8omc"]
-size = Vector2(110.666626, 78)
-
 [node name="Main Scene" type="Node2D"]
 scale = Vector2(1.5, 1.5)
 metadata/_edit_horizontal_guides_ = [604.0]
@@ -7359,8 +7352,6 @@ label_settings = SubResource("LabelSettings_np8lt")
 position = Vector2(-141.66667, 75)
 scale = Vector2(0.64583313, 0.6458333)
 texture = ExtResource("8_ibde2")
-
-[node name="SpeechBubble" parent="Farmer" instance=ExtResource("17_t8omc")]
 
 [node name="NpcW1" parent="." instance=ExtResource("1_2nv37")]
 position = Vector2(704.6664, 391.3336)
@@ -7442,12 +7433,3 @@ libraries = {
 &"": SubResource("AnimationLibrary_m8pv2")
 }
 autoplay = "going up"
-
-[node name="DitchTrigger" type="Area2D" parent="."]
-position = Vector2(2560, 409.33334)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DitchTrigger"]
-position = Vector2(22.666666, 3.9999897)
-shape = SubResource("RectangleShape2D_t8omc")
-
-[connection signal="body_entered" from="DitchTrigger" to="Farmer" method="_on_ditch_trigger_body_entered"]
