@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://ddisbs0xynxho" path="res://Assets/City Tileset's/City Tileset's/Project Mute Tileset V4.png" id="12_x65fg"]
 [ext_resource type="PackedScene" uid="uid://r0nlvnqajhmf" path="res://Scenes/Mouse.tscn" id="16_vndvl"]
 [ext_resource type="PackedScene" uid="uid://b5ahon5im8fdr" path="res://Scenes/sewer_platform.tscn" id="17_dvjdo"]
-[ext_resource type="Texture2D" uid="uid://bxkwq8odei2eu" path="res://Assets/City_Clean/4.Sidewalk.png" id="18_kuq17"]
+[ext_resource type="Texture2D" uid="uid://b3147buu6ac6x" path="res://Assets/City_Clean/4.Sidewalk.png" id="18_kuq17"]
 [ext_resource type="PackedScene" uid="uid://dmdje5a0pm38q" path="res://Scenes/Garbage_platform.tscn" id="22_x65fg"]
 [ext_resource type="PackedScene" uid="uid://b80oydiimfxi1" path="res://Scenes/Climbing_Platform.tscn" id="24_5apre"]
 
@@ -7275,6 +7275,21 @@ _data = {
 &"new_animation": SubResource("Animation_g6op0")
 }
 
+[sub_resource type="Animation" id="Animation_84nra"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(4612.6665, 347.33334)]
+}
+
 [sub_resource type="Animation" id="Animation_t8omc"]
 resource_name = "going up"
 length = 7.0
@@ -7290,21 +7305,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(4612.6665, 347.33334), Vector2(4613.333, 486.6667)]
-}
-
-[sub_resource type="Animation" id="Animation_84nra"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(4612.6665, 347.33334)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_m8pv2"]

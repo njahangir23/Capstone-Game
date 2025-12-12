@@ -1,9 +1,290 @@
-[gd_scene format=3 uid="uid://eo2q5shvje4k"]
+[gd_scene load_steps=14 format=3 uid="uid://eo2q5shvje4k"]
+
+[ext_resource type="Texture2D" uid="uid://081xwi0sp8s2" path="res://Assets/summer 1/Summer1.png" id="1_2o727"]
+[ext_resource type="Texture2D" uid="uid://c4v2ixengsvp4" path="res://Assets/summer 2/Summer2.png" id="1_7bloo"]
+[ext_resource type="Script" uid="uid://clsccb0pnsvbu" path="res://Scripts/tutorial.gd" id="1_vv0ms"]
+[ext_resource type="Texture2D" uid="uid://blua2v81f8ovm" path="res://Assets/GandalfHardcore City Tiles/GandalfHardcore City Tiles/City background.png" id="2_hxa32"]
+[ext_resource type="PackedScene" uid="uid://dy13p7i60ju1f" path="res://Scenes/patch.tscn" id="2_rlm2d"]
+[ext_resource type="Texture2D" uid="uid://bh4rs4mxtp8og" path="res://Assets/cheerful-old-man-casual-attire.png" id="2_uo1fs"]
+[ext_resource type="FontFile" uid="uid://cjn4prvirh6hf" path="res://Font/dungeon-mode.ttf" id="5_rlm2d"]
+[ext_resource type="Texture2D" uid="uid://c7dahsly4073j" path="res://Assets/Sad.png" id="8_dlght"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vv0ms"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hxa32"]
+font = ExtResource("5_rlm2d")
+font_size = 34
+font_color = Color(0.97060233, 0.97060245, 0.97060233, 1)
+
+[sub_resource type="Animation" id="Animation_dlght"]
+resource_name = "text"
+length = 18.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../House:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5, 7, 10, 13, 15.033334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["This is my farm, my home", "I love it here!", "These are my prized cabbages!", "I had a dream to sell them in the city", "But then I lost them!", "Can you help me find them?"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:label_settings:font_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(7, 10, 13, 15.033334),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [34, 26, 43, 33]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sky Patch:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 11.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Cabbages:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Farmer:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Sad Farmer:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 13),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_8i65c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../House:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["This is my farm, my home"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:label_settings:font_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [34]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Sky Patch:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../Cabbages:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("../Farmer:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../Sad Farmer:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_m35rq"]
+_data = {
+&"RESET": SubResource("Animation_8i65c"),
+&"text": SubResource("Animation_dlght")
+}
 
 [node name="Tutorial" type="Node2D"]
+script = ExtResource("1_vv0ms")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="City Background" type="Sprite2D" parent="."]
+position = Vector2(577, 324)
+scale = Vector2(1.1230469, 1.8786128)
+texture = ExtResource("2_hxa32")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Sky Patch" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577, 324)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_7bloo")
 
-[node name="Sprite2D3" type="Sprite2D" parent="."]
+[node name="Cabbages" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577, 323)
+scale = Vector2(0.5, 0.5)
+
+[node name="Patch" parent="Cabbages" instance=ExtResource("2_rlm2d")]
+position = Vector2(-1184, -210)
+
+[node name="Patch2" parent="Cabbages" instance=ExtResource("2_rlm2d")]
+position = Vector2(-42, -202)
+
+[node name="Patch3" parent="Cabbages" instance=ExtResource("2_rlm2d")]
+position = Vector2(-1066, -152)
+
+[node name="Patch4" parent="Cabbages" instance=ExtResource("2_rlm2d")]
+position = Vector2(-38, -130)
+
+[node name="Patch5" parent="Cabbages" instance=ExtResource("2_rlm2d")]
+position = Vector2(-1148, -98)
+
+[node name="Patch6" parent="Cabbages" instance=ExtResource("2_rlm2d")]
+position = Vector2(-34, -68)
+
+[node name="Patch7" parent="Cabbages" instance=ExtResource("2_rlm2d")]
+position = Vector2(-1160, -44)
+
+[node name="Patch8" type="Sprite2D" parent="Cabbages"]
+visible = false
+position = Vector2(-1154, -646)
+scale = Vector2(2, 2)
+
+[node name="Node2D" type="Node2D" parent="Cabbages"]
+
+[node name="House" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(577, 325)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_2o727")
+
+[node name="Farmer" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1021, 569)
+scale = Vector2(0.4, 0.368)
+texture = ExtResource("2_uo1fs")
+region_enabled = true
+region_rect = Rect2(0, 0, 788, 1416)
+
+[node name="ColorRect" type="ColorRect" parent="Farmer"]
+offset_left = -120.0
+offset_top = -160.32608
+offset_right = -22.5
+offset_bottom = -138.58694
+color = Color(0.8627451, 0.27450982, 0.30588236, 1)
+
+[node name="Label" type="Label" parent="."]
+material = SubResource("ShaderMaterial_vv0ms")
+offset_left = 4.0
+offset_top = 532.0
+offset_right = 882.0
+offset_bottom = 650.0
+text = "This is my farm, my home"
+label_settings = SubResource("LabelSettings_hxa32")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Label"]
+libraries = {
+&"": SubResource("AnimationLibrary_m35rq")
+}
+autoplay = "text"
+
+[node name="Sad Farmer" type="Sprite2D" parent="."]
+position = Vector2(1011, 536)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_dlght")
+
+[connection signal="animation_finished" from="Label/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

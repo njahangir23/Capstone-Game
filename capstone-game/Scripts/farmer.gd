@@ -51,7 +51,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func set_cabbage (new_cabbage_count: int) -> void:
 	cabbage_counter = new_cabbage_count
 	cabbage_label.text = "=" + str(cabbage_counter)
-	if cabbage_counter >= 15:
+	if cabbage_counter >= 10:
 		_go_to_next_scene()
 
 func _go_to_next_scene():
