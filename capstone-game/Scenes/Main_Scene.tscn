@@ -22,10 +22,6 @@
 [ext_resource type="PackedScene" uid="uid://r0nlvnqajhmf" path="res://Scenes/Mouse.tscn" id="16_vndvl"]
 [ext_resource type="PackedScene" uid="uid://b5ahon5im8fdr" path="res://Scenes/sewer_platform.tscn" id="17_dvjdo"]
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-[ext_resource type="PackedScene" uid="uid://cso3yp6yso7ji" path="res://speech_bubble.tscn" id="17_t8omc"]
->>>>>>> Stashed changes
 =======
 [ext_resource type="PackedScene" uid="uid://cso3yp6yso7ji" path="res://speech_bubble.tscn" id="17_t8omc"]
 >>>>>>> Stashed changes
