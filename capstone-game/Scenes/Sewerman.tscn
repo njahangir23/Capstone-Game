@@ -1,12 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://bvb6633cqbnj7"]
+[gd_scene load_steps=5 format=3 uid="uid://bvb6633cqbnj7"]
 
+[ext_resource type="Script" uid="uid://dl8xi2r5fcm3f" path="res://Scenes/sewerman.gd" id="1_1oema"]
 [ext_resource type="Texture2D" uid="uid://bdle53bvve0oj" path="res://Assets/Generic Male NPCs A.png" id="1_pf3m5"]
+[ext_resource type="PackedScene" uid="uid://cso3yp6yso7ji" path="res://speech_bubble.tscn" id="3_sauwq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rhoub"]
+radius = 308.02597
 
 [node name="Sewerman" type="Area2D"]
+script = ExtResource("1_1oema")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(3.749998, -14.75)
+position = Vector2(2, -14.000001)
 scale = Vector2(0.6875, 0.68303573)
 texture = ExtResource("1_pf3m5")
 region_enabled = true
 region_rect = Rect2(560, 8, 88, 112)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, -7)
+shape = SubResource("CircleShape2D_rhoub")
+
+[node name="SpeechBubble" parent="." instance=ExtResource("3_sauwq")]
+position = Vector2(38, -97)
