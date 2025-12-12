@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=14 format=3 uid="uid://eo2q5shvje4k"]
 
 [ext_resource type="Texture2D" uid="uid://081xwi0sp8s2" path="res://Assets/summer 1/Summer1.png" id="1_2o727"]
@@ -196,6 +197,9 @@ _data = {
 &"RESET": SubResource("Animation_8i65c"),
 &"text": SubResource("Animation_dlght")
 }
+=======
+[gd_scene load_steps=0 format=3 uid="uid://eo2q5shvje4k"]
+>>>>>>> Stashed changes
 
 [node name="Tutorial" type="Node2D"]
 script = ExtResource("1_vv0ms")
