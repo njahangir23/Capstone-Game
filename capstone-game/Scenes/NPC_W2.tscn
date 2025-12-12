@@ -1,15 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://1ckwpe0lsbr0"]
+[gd_scene load_steps=6 format=3 uid="uid://1ckwpe0lsbr0"]
+
+[ext_resource type="Texture2D" uid="uid://b2s07urf576hi" path="res://Assets/Generic Female NPCs A.png" id="1_v6q7x"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klw5q"]
+atlas = ExtResource("1_v6q7x")
+region = Rect2(720, 480, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxrqd"]
+atlas = ExtResource("1_v6q7x")
+region = Rect2(800, 480, 80, 120)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqe83"]
+atlas = ExtResource("1_v6q7x")
+region = Rect2(880, 480, 80, 120)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jl2rq"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klw5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxrqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqe83")
+}],
 "loop": true,
 "name": &"new_animation",
-"speed": 5.0
+"speed": 0.3
 }]
 
 [node name="NpcW2" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -4)
+scale = Vector2(0.41875, 0.35833335)
 sprite_frames = SubResource("SpriteFrames_jl2rq")
 animation = &"new_animation"
+autoplay = "new_animation"
+frame_progress = 0.85716695

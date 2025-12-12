@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://2s7s4kq8vk6l"]
+
+[ext_resource type="Texture2D" uid="uid://btkjloj8ljgkl" path="res://Assets/Generic Children NPCs.png" id="1_5nquy"]
+
+[node name="Npw5" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 6)
+scale = Vector2(0.4375, 0.38636363)
+texture = ExtResource("1_5nquy")
+region_enabled = true
+region_rect = Rect2(248, 512, 64, 88)

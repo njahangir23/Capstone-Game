@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq1gyctofn3ct"]
+
+[ext_resource type="Texture2D" uid="uid://bdle53bvve0oj" path="res://Assets/Generic Male NPCs A.png" id="1_v1njr"]
+
+[node name="Npc4" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.0000005, 1)
+scale = Vector2(0.30625, 0.31473216)
+texture = ExtResource("1_v1njr")
+region_enabled = true
+region_rect = Rect2(640, 488, 80, 112)

@@ -831,10 +831,10 @@ tile_map_data = PackedByteArray("AABAAB4AAAAGAAQAAABAAB8AAAAGAAUAAABAACAAAAAGAAY
 tile_set = SubResource("TileSet_cqbjl")
 
 [node name="Label" type="Label" parent="."]
-offset_left = 277.0
-offset_top = 3.0
-offset_right = 874.0
-offset_bottom = 53.0
+offset_left = 276.0
+offset_top = 19.0
+offset_right = 873.0
+offset_bottom = 69.0
 theme_override_fonts/font = ExtResource("3_liiul")
 theme_override_font_sizes/font_size = 56
 text = "How to Play?"
@@ -859,23 +859,12 @@ Green cabbages are 1 point, purple are worth 2 points
 Be wary of this new environment,
 ~anything can happen~ 
  \\(˚☐˚”)/ 
-Press start to explore the city!
+Collect the cabbage to start exploring the city
 "
 horizontal_alignment = 1
 
 [node name="Farmer" parent="." instance=ExtResource("8_8g7u7")]
-position = Vector2(605, 430)
+position = Vector2(71, 424)
 
 [node name="Tutorialcab" parent="." instance=ExtResource("8_mxgex")]
 position = Vector2(1061, 431)
-
-[node name="Start" type="Button" parent="."]
-offset_left = 941.0
-offset_top = 244.0
-offset_right = 1089.0
-offset_bottom = 293.0
-theme_override_fonts/font = ExtResource("3_liiul")
-theme_override_font_sizes/font_size = 22
-text = "Start"
-
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]

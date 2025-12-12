@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvb6633cqbnj7"]
+
+[ext_resource type="Texture2D" uid="uid://bdle53bvve0oj" path="res://Assets/Generic Male NPCs A.png" id="1_pf3m5"]
+
+[node name="Sewerman" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(3.749998, -14.75)
+scale = Vector2(0.6875, 0.68303573)
+texture = ExtResource("1_pf3m5")
+region_enabled = true
+region_rect = Rect2(560, 8, 88, 112)
