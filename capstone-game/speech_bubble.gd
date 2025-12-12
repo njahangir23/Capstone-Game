@@ -1,17 +1,17 @@
 extends Node2D
 
 @onready var text_node: RichTextLabel = $Anchor/RichTextLabel
-@onready var text_bg: ColorRect       = $Anchor/ColorRect
+@onready var text_bg: ColorRect = $Anchor/ColorRect
+@onready var timer: Timer = $Timer
 
 const CHAR_TIME: float = 0.03
-const PADDING   := Vector2(16, 20)
+const PADDING := Vector2(16, 20)
 const MIN_WIDTH := 220.0
 const MIN_HEIGHT := 70.0
 
 
 func _ready() -> void:
 	visible = false
-
 	text_node.autowrap_mode = TextServer.AUTOWRAP_WORD
 	text_node.add_theme_color_override("default_color", Color.BLACK)
 	text_node.bbcode_enabled = true
@@ -20,8 +20,8 @@ func _ready() -> void:
 func set_text(text: String, wait_time: float = 1.5) -> void:
 	visible = true
 
-	$Timer.stop()
-	$Timer.wait_time = wait_time
+	timer.stop()
+	timer.wait_time = wait_time
 
 	text_node.bbcode_text = text
 	text_node.visible_ratio = 0.0
@@ -31,7 +31,7 @@ func set_text(text: String, wait_time: float = 1.5) -> void:
 	var char_count: int = text_node.get_total_character_count()
 	var duration: float = max(0.2, float(char_count) * CHAR_TIME)
 
-	var tween := create_tween()
+	var tween: Tween = create_tween()
 	tween.tween_property(text_node, "visible_ratio", 1.0, duration)
 	tween.finished.connect(_on_tween_finished)
 
@@ -45,15 +45,13 @@ func _update_bubble_size() -> void:
 	text_node.size = text_size
 
 	var bubble_size := text_size + PADDING * 2.0
-
 	text_bg.size = bubble_size
 	text_bg.position = Vector2.ZERO
-
 	text_node.position = PADDING
 
 
 func _on_tween_finished() -> void:
-	$Timer.start()
+	timer.start()
 
 
 func _on_Timer_timeout() -> void:
