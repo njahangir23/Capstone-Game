@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dc8ecqkaln0or"]
+[gd_scene load_steps=7 format=3 uid="uid://dc8ecqkaln0or"]
 
 [ext_resource type="Texture2D" uid="uid://cg5o028farlh" path="res://Assets/finalplayerfrontwalkspritesheet.png" id="1_pchja"]
+[ext_resource type="Script" uid="uid://c0ft7f6ldevsn" path="res://Scenes/office_man.gd" id="1_vmhae"]
+[ext_resource type="PackedScene" uid="uid://cso3yp6yso7ji" path="res://speech_bubble.tscn" id="3_wwcmm"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uqnyh"]
 atlas = ExtResource("1_pchja")
@@ -17,10 +19,23 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_4dgne"]
+radius = 132.03409
+
 [node name="OfficeMan" type="CharacterBody2D"]
+script = ExtResource("1_vmhae")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(2.0000005, 8)
 scale = Vector2(0.65151507, 0.703125)
 sprite_frames = SubResource("SpriteFrames_vmhae")
 frame_progress = 0.3614215
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_4dgne")
+
+[node name="SpeechBubble" parent="." instance=ExtResource("3_wwcmm")]
+position = Vector2(23, -74)
