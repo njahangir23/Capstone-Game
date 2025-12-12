@@ -7448,3 +7448,4 @@ libraries = {
 autoplay = "going up"
 
 [connection signal="body_entered" from="DitchTrigger" to="Farmer" method="_on_ditch_trigger_body_entered"]
+[connection signal="body_exited" from="DitchTrigger" to="Farmer" method="_on_ditch_trigger_body_exited"]

@@ -73,3 +73,8 @@ func _go_to_next_scene() -> void:
 func _on_ditch_trigger_body_entered(body: Node2D) -> void:
 	if body == self:
 		say("Oh shit!!")
+
+
+func _on_ditch_trigger_body_exited(body: Node2D) -> void:
+	if body == self and speech_bubble:
+		speech_bubble.visible = false
