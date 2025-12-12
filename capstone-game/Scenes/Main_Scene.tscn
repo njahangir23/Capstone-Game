@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=4 uid="uid://ch23u8c6j38sp"]
+[gd_scene load_steps=55 format=4 uid="uid://ch23u8c6j38sp"]
 
 [ext_resource type="PackedScene" uid="uid://cm5rtwr6uftrw" path="res://Scenes/NPC_W1.tscn" id="1_2nv37"]
 [ext_resource type="PackedScene" uid="uid://cyt55a1vqlrgr" path="res://Scenes/background.tscn" id="1_t33is"]
@@ -21,9 +21,13 @@
 [ext_resource type="Texture2D" uid="uid://ddisbs0xynxho" path="res://Assets/City Tileset's/City Tileset's/Project Mute Tileset V4.png" id="12_x65fg"]
 [ext_resource type="PackedScene" uid="uid://r0nlvnqajhmf" path="res://Scenes/Mouse.tscn" id="16_vndvl"]
 [ext_resource type="PackedScene" uid="uid://b5ahon5im8fdr" path="res://Scenes/sewer_platform.tscn" id="17_dvjdo"]
+[ext_resource type="PackedScene" uid="uid://cso3yp6yso7ji" path="res://speech_bubble.tscn" id="17_t8omc"]
 [ext_resource type="Texture2D" uid="uid://b3147buu6ac6x" path="res://Assets/City_Clean/4.Sidewalk.png" id="18_kuq17"]
 [ext_resource type="PackedScene" uid="uid://dmdje5a0pm38q" path="res://Scenes/Garbage_platform.tscn" id="22_x65fg"]
 [ext_resource type="PackedScene" uid="uid://b80oydiimfxi1" path="res://Scenes/Climbing_Platform.tscn" id="24_5apre"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5apre"]
+size = Vector2(111.333496, 894)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_06phl"]
 texture = ExtResource("2_6bry8")
@@ -7317,6 +7321,13 @@ _data = {
 scale = Vector2(1.5, 1.5)
 metadata/_edit_horizontal_guides_ = [604.0]
 
+[node name="DitchTrigger" type="Area2D" parent="."]
+position = Vector2(2578, 412.6667)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DitchTrigger"]
+position = Vector2(5.666748, 418.3333)
+shape = SubResource("RectangleShape2D_5apre")
+
 [node name="Background" parent="." instance=ExtResource("1_t33is")]
 scroll_offset = Vector2(-114.666664, 297.3333)
 
@@ -7352,6 +7363,8 @@ label_settings = SubResource("LabelSettings_np8lt")
 position = Vector2(-141.66667, 75)
 scale = Vector2(0.64583313, 0.6458333)
 texture = ExtResource("8_ibde2")
+
+[node name="SpeechBubble" parent="Farmer" instance=ExtResource("17_t8omc")]
 
 [node name="NpcW1" parent="." instance=ExtResource("1_2nv37")]
 position = Vector2(704.6664, 391.3336)
@@ -7433,3 +7446,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_m8pv2")
 }
 autoplay = "going up"
+
+[connection signal="body_entered" from="DitchTrigger" to="Farmer" method="_on_ditch_trigger_body_entered"]
