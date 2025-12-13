@@ -21,13 +21,12 @@
 [ext_resource type="Texture2D" uid="uid://ddisbs0xynxho" path="res://Assets/City Tileset's/City Tileset's/Project Mute Tileset V4.png" id="12_x65fg"]
 [ext_resource type="PackedScene" uid="uid://r0nlvnqajhmf" path="res://Scenes/Mouse.tscn" id="16_vndvl"]
 [ext_resource type="PackedScene" uid="uid://b5ahon5im8fdr" path="res://Scenes/sewer_platform.tscn" id="17_dvjdo"]
-[ext_resource type="PackedScene" uid="uid://cso3yp6yso7ji" path="res://speech_bubble.tscn" id="17_t8omc"]
+[ext_resource type="PackedScene" path="res://speech_bubble.tscn" id="17_t8omc"]
 [ext_resource type="Texture2D" uid="uid://b3147buu6ac6x" path="res://Assets/City_Clean/4.Sidewalk.png" id="18_kuq17"]
 [ext_resource type="PackedScene" uid="uid://dmdje5a0pm38q" path="res://Scenes/Garbage_platform.tscn" id="22_x65fg"]
 [ext_resource type="PackedScene" uid="uid://b80oydiimfxi1" path="res://Scenes/Climbing_Platform.tscn" id="24_5apre"]
 [ext_resource type="PackedScene" uid="uid://dq1gyctofn3ct" path="res://Scenes/Npc4.tscn" id="26_24v2t"]
 [ext_resource type="PackedScene" uid="uid://dc8ecqkaln0or" path="res://Scenes/Office_Man.tscn" id="26_84nra"]
-[ext_resource type="Script" uid="uid://dl8xi2r5fcm3f" path="res://Scenes/sewerman.gd" id="26_kmudl"]
 [ext_resource type="PackedScene" uid="uid://2s7s4kq8vk6l" path="res://Scenes/Npw5.tscn" id="27_kmudl"]
 [ext_resource type="PackedScene" uid="uid://1ckwpe0lsbr0" path="res://Scenes/NPC_W2.tscn" id="27_m8pv2"]
 [ext_resource type="PackedScene" uid="uid://3wpcpgf4awoh" path="res://Scenes/NPC3.tscn" id="28_0vhqq"]
@@ -7550,6 +7549,22 @@ sources/0 = SubResource("TileSetAtlasSource_m2luv")
 sources/1 = SubResource("TileSetAtlasSource_24v2t")
 sources/2 = SubResource("TileSetAtlasSource_kmudl")
 
+[sub_resource type="Animation" id="Animation_djj0a"]
+length = 7.0
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3054, 1016.00006), Vector2(3800, 1016)]
+}
+
 [sub_resource type="Animation" id="Animation_p4gmk"]
 resource_name = "move"
 length = 5.0
@@ -7565,22 +7580,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Vector2(3048.6667, 1135.3334), Vector2(3800, 1135.333)]
-}
-
-[sub_resource type="Animation" id="Animation_djj0a"]
-length = 7.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 7),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(3054, 1016.00006), Vector2(3800, 1016)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ap6jj"]
@@ -7707,6 +7706,7 @@ tile_set = SubResource("TileSet_dvjdo")
 
 [node name="Mouse" parent="." instance=ExtResource("16_vndvl")]
 position = Vector2(2808.6665, 1326.6667)
+script = null
 
 [node name="Sewer Platform" parent="." instance=ExtResource("17_dvjdo")]
 position = Vector2(3054, 1016.00006)
@@ -7815,8 +7815,7 @@ position = Vector2(1444, 371.33334)
 position = Vector2(2232.6665, 360.66666)
 
 [node name="Sewerman" parent="." instance=ExtResource("29_bqd2n")]
-position = Vector2(3178, 1234)
-script = ExtResource("26_kmudl")
+position = Vector2(3166.6667, 1229.3334)
 
 [node name="Npc4" parent="." instance=ExtResource("26_24v2t")]
 position = Vector2(7099.333, 370.00003)

@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv0gfe8qq74pl"]
+
+[ext_resource type="Texture2D" uid="uid://bhfgksbds0arx" path="res://Assets/Basket.png" id="1_n8vtf"]
+[ext_resource type="Texture2D" uid="uid://cjiv5mysqdpui" path="res://Assets/Vegetables_/Vegetables_/One/Green Cabbage.png" id="2_iqjap"]
+[ext_resource type="Texture2D" uid="uid://ucy40f2q6slw" path="res://Assets/Vegetables_/Vegetables_/One/Chinese Cabbage .png" id="3_mqbiq"]
+[ext_resource type="Texture2D" uid="uid://de16n4j70houy" path="res://Assets/Vegetables_/Vegetables_/One/Purple Cabbage.png" id="4_hw08i"]
+
+[node name="BagCabbage" type="Node2D"]
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(86.99998, 84)
+scale = Vector2(0.4345006, 0.4236866)
+texture = ExtResource("1_n8vtf")
+region_enabled = true
+region_rect = Rect2(168, 176, 424, 384)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(37, 63.5)
+scale = Vector2(1.1875, 1.15625)
+texture = ExtResource("2_iqjap")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(128, 65)
+scale = Vector2(1.53125, 1.28125)
+texture = ExtResource("2_iqjap")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(89.00001, 66)
+scale = Vector2(1.28125, 1.3125)
+texture = ExtResource("3_mqbiq")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(50, 47.000004)
+scale = Vector2(1.09375, 1.0625)
+texture = ExtResource("4_hw08i")
+
+[node name="Sprite2D10" type="Sprite2D" parent="."]
+position = Vector2(89, 50)
+scale = Vector2(1.09375, 1.0625)
+texture = ExtResource("4_hw08i")
+
+[node name="Sprite2D11" type="Sprite2D" parent="."]
+position = Vector2(133, 49)
+scale = Vector2(1.09375, 1.0625)
+texture = ExtResource("4_hw08i")
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(61, 51)
+texture = ExtResource("3_mqbiq")
+
+[node name="Sprite2D9" type="Sprite2D" parent="."]
+position = Vector2(109, 50)
+texture = ExtResource("3_mqbiq")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+position = Vector2(112, 69)
+scale = Vector2(1.09375, 1.0625)
+texture = ExtResource("4_hw08i")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(61, 69)
+scale = Vector2(1.25, 1.1875)
+texture = ExtResource("4_hw08i")

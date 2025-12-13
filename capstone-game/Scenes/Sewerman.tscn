@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dl8xi2r5fcm3f" path="res://Scenes/sewerman.gd" id="1_1oema"]
 [ext_resource type="Texture2D" uid="uid://bdle53bvve0oj" path="res://Assets/Generic Male NPCs A.png" id="1_pf3m5"]
-[ext_resource type="PackedScene" uid="uid://cso3yp6yso7ji" path="res://speech_bubble.tscn" id="3_sauwq"]
+[ext_resource type="PackedScene" path="res://speech_bubble.tscn" id="3_sauwq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_rhoub"]
 radius = 308.02597
@@ -24,4 +24,5 @@ position = Vector2(-3, -7)
 shape = SubResource("CircleShape2D_rhoub")
 
 [node name="SpeechBubble" parent="." instance=ExtResource("3_sauwq")]
-position = Vector2(38, -97)
+position = Vector2(37, -121)
+scale = Vector2(1.5, 1.5)

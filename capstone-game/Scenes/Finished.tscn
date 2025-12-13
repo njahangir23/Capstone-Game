@@ -1,3 +1,197 @@
-[gd_scene format=3 uid="uid://ds52udbndedp0"]
+[gd_scene load_steps=10 format=3 uid="uid://ds52udbndedp0"]
+
+[ext_resource type="Texture2D" uid="uid://cdvlcyfgewq41" path="res://Assets/cyberpunk-street-files/Assets/city skyline/preview.png" id="1_2vqda"]
+[ext_resource type="Script" uid="uid://dyhbsbq2p3o2f" path="res://Scripts/finished.gd" id="1_ilq0k"]
+[ext_resource type="Texture2D" uid="uid://081xwi0sp8s2" path="res://Assets/summer 1/Summer1.png" id="2_ch77c"]
+[ext_resource type="Texture2D" uid="uid://bh4rs4mxtp8og" path="res://Assets/cheerful-old-man-casual-attire.png" id="2_o74k6"]
+[ext_resource type="FontFile" uid="uid://cjn4prvirh6hf" path="res://Font/dungeon-mode.ttf" id="3_ilq0k"]
+[ext_resource type="PackedScene" uid="uid://bv0gfe8qq74pl" path="res://Scenes/Bag Cabbage.tscn" id="4_ch77c"]
+
+[sub_resource type="Animation" id="Animation_ad5fg"]
+resource_name = "story"
+length = 14.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Night City:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": ["Thank you for helping 
+me get my cabbages", "Especially before dark
+..."]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [48, 43]
+}
+
+[sub_resource type="Animation" id="Animation_w11yb"]
+length = 20.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Night City:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Label:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 5, 7, 9, 12, 14, 16.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["Thank you for helping 
+me get my cabbages", "Especially before it
+got dark ...", "I don't think the 
+city is for me", "Ah, it's good to be
+home", "This is why you 
+shouldn't follow
+your dreams", "Stick to what you
+know", "Time to tend to
+my cabbages", "Legend says he still 
+is finding his
+cabbages"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Label:theme_override_font_sizes/font_size")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5, 5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [48, 48, 48]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Label:theme_override_constants/outline_size")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [9]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Farmer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 16),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BagCabbage:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 16),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ykxg0"]
+_data = {
+&"RESET": SubResource("Animation_w11yb"),
+&"story": SubResource("Animation_ad5fg")
+}
 
 [node name="Finished" type="Node2D"]
+script = ExtResource("1_ilq0k")
+
+[node name="Farm" type="Sprite2D" parent="."]
+position = Vector2(574, 326)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_ch77c")
+
+[node name="Night City" type="Sprite2D" parent="."]
+position = Vector2(579.25006, 337.75)
+scale = Vector2(4.032986, 3.5234375)
+texture = ExtResource("1_2vqda")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ykxg0")
+}
+autoplay = "RESET"
+
+[node name="Farmer" type="Sprite2D" parent="."]
+position = Vector2(1017.00006, 512)
+scale = Vector2(0.3597716, 0.30650002)
+texture = ExtResource("2_o74k6")
+
+[node name="ColorRect" type="ColorRect" parent="Farmer"]
+offset_left = -101.0
+offset_top = -454.0
+offset_right = -57.0
+offset_bottom = -427.0
+color = Color(0.85490197, 0.27450982, 0.3019608, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Farmer"]
+offset_left = -57.0
+offset_top = -456.0
+offset_right = -19.0
+offset_bottom = -437.0
+color = Color(0.48235294, 0.02745098, 0.05490196, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 2.0
+offset_top = 409.0
+offset_right = 941.00134
+offset_bottom = 544.00104
+theme_override_colors/font_color = Color(0.97060233, 0.97060245, 0.97060233, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("3_ilq0k")
+theme_override_font_sizes/font_size = 48
+text = "Thank you for helping 
+me get my cabbages"
+horizontal_alignment = 1
+
+[node name="BagCabbage" parent="." instance=ExtResource("4_ch77c")]
+position = Vector2(708, 486)
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
