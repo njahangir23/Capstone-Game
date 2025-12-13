@@ -7766,9 +7766,6 @@ texture = ExtResource("18_kuq17")
 [node name="PurpleCabbage3" parent="Points" instance=ExtResource("11_ibde2")]
 position = Vector2(6590.667, -40)
 
-[node name="PurpleCabbage2" parent="Points" instance=ExtResource("11_ibde2")]
-position = Vector2(2096.6667, 244.00002)
-
 [node name="PurpleCabbage" parent="Points" instance=ExtResource("11_ibde2")]
 position = Vector2(1461.3334, -250.66667)
 
