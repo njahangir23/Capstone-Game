@@ -38,9 +38,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_rpcp7"]
-a = Vector2(-6, -2)
-b = Vector2(-3, 0)
+[sub_resource type="CircleShape2D" id="CircleShape2D_rpcp7"]
 
 [node name="Bird" type="CharacterBody2D"]
 
@@ -48,7 +46,8 @@ b = Vector2(-3, 0)
 position = Vector2(1, -2)
 sprite_frames = SubResource("SpriteFrames_tto85")
 animation = &"flying"
-frame_progress = 0.36437747
+autoplay = "flying"
+frame_progress = 0.013462195
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("SegmentShape2D_rpcp7")
+shape = SubResource("CircleShape2D_rpcp7")
