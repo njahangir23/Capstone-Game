@@ -54,7 +54,8 @@ script = ExtResource("1_kalpc")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1ytvo")
 animation = &"walking"
-frame_progress = 0.8327865
+autoplay = "walking"
+frame_progress = 0.61689115
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D"]
 position = Vector2(4, 3)
