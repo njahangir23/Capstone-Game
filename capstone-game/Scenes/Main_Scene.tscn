@@ -7737,10 +7737,10 @@ tracks/0/path = NodePath(".:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 4, 5, 8),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
+"times": PackedFloat32Array(0, 1, 4, 5, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(6242, 361.33334), Vector2(6086.667, 62.66667), Vector2(6086.667, 62.66667), Vector2(6240.0005, -134)]
+"values": [Vector2(6242, 361.33334), Vector2(6242, 361.33334), Vector2(6086.667, 62.66667), Vector2(6086.667, 62.66667), Vector2(6240.0005, -134)]
 }
 
 [sub_resource type="Animation" id="Animation_argwp"]
