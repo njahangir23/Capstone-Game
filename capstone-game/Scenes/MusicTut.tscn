@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://ifxyoqpcye7d"]
+[gd_scene load_steps=2 format=3 uid="uid://ifxyoqpcye7d"]
 
-[node name="MusicTut" type="AudioStreamPlayer"]
+[ext_resource type="AudioStream" uid="uid://dy7yna5l652s3" path="res://Assets/Must Work To Eat.mp3" id="1_bf1yg"]
+
+[node name="MusicTut" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_bf1yg")
+volume_db = -4.529
+autoplay = true

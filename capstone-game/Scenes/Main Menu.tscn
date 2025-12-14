@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dy13p7i60ju1f" path="res://Scenes/patch.tscn" id="8_wib81"]
 [ext_resource type="Script" uid="uid://cks1f3yd3utkp" path="res://Scripts/camera_2d.gd" id="9_tbdrc"]
 [ext_resource type="FontFile" uid="uid://cjn4prvirh6hf" path="res://Font/dungeon-mode.ttf" id="10_tbdrc"]
-[ext_resource type="AudioStream" uid="uid://dgfcaercdrath" path="res://Assets/Must Work to Eat.wav" id="11_tbdrc"]
+[ext_resource type="PackedScene" uid="uid://ifxyoqpcye7d" path="res://Scenes/MusicTut.tscn" id="11_tbdrc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vuees"]
 bg_color = Color(0, 0, 0, 0.8117647)
@@ -164,10 +164,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_ef6yq")
 theme_override_styles/hover = SubResource("StyleBoxFlat_tbdrc")
 text = "Tutorial"
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("11_tbdrc")
-autoplay = true
-attenuation = 0.6830201
+[node name="MusicTut" parent="." instance=ExtResource("11_tbdrc")]
 
 [connection signal="pressed" from="Camera2D/Start Game" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="Camera2D/Tutorial" to="." method="_on_tutorial_pressed"]
