@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://ifxyoqpcye7d"]
+
+[node name="MusicTut" type="AudioStreamPlayer"]
